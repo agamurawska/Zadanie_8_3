@@ -1,0 +1,19 @@
+{
+  "name": "agnieszka",
+  "version": "1.0.0",
+  "description": "java-script",
+  "main": "index.js",
+  "scripts": {
+    "test": "kodilla"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0"
+  }
+}

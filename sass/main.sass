@@ -1,0 +1,52 @@
+﻿$menu-color: #313234
+
+body 
+	margin: 0 auto
+	font-family: Helvetica sans-serif
+	background: #E6E6FA
+
+.container 
+	max-width: 1200px
+	margin: 0 auto
+
+header
+	height: 50px
+	color: &menu-color
+	width: 100%
+	background: $menu-color
+	position: fixed
+			ul 
+			float: right
+			margin: 5px
+			padding: 0
+			list-style-type: none	
+
+			li 
+				display: inline-block
+
+				a 	
+					line-height: 50px
+					padding: 0 20px
+					text-decoration: none
+					color: #FFF
+					text-transform: uppercase
+					&:hover
+						color: #CCC
+						cursor:pointer
+					&:visited
+						color: #E0FFFF
+
+.hero 
+	background: url(/images/pexels-photo-268819)
+	width: 100%
+	height: 450px
+	padding-top: 50px
+	background-size: cover
+
+.main
+	font-size: 18px
+	color: $menu-color
+
+footer
+	background: $menu-color
+	margin: 0 auto
