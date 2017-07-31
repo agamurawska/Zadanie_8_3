@@ -1,4 +1,4 @@
-﻿module.exports = function(grunt) {
+module.exports = function(grunt) {
 
   // Project configuration
   grunt.initConfig({
@@ -8,24 +8,34 @@
   		},
   		dist: {
   			files: {
-  				'main.css': 'main.sass'
+  				'css/style.css': 'sass/main.sass'
   			}
   		}
   	},
 
-  	jshint: {
-      all: ['js/*.js']
+    watch: {
+    scripts: {
+        files: ['sass/*.sass'],
+        tasks: ['sass'],
+        options: {
+            spawn: false,
+        },
     }
+}
+
+    jshint: {
+      all: ['js/*.js']
+    },
   });
 
 
  
   // Load the plugins tasks
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
 
-  grunt.registerTask('default', ['sass']);
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['sass', 'watch', 'jshint' ]);
 };
